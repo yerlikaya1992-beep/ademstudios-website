@@ -141,6 +141,29 @@
   .project .visual .appicon img{width:100%;height:100%;object-fit:cover;display:block}
   .project .visual .appname{position:relative;z-index:1;font-family:'Bungee',cursive;
     font-size:24px;letter-spacing:1px;text-shadow:0 2px 16px rgba(0,0,0,.75)}
+  /* Klickbare Karte → kleiner Vorgeschmack auf den „Bloom-Weg" */
+  .project .visual{cursor:pointer}
+  .project .visual .tap-hint{position:absolute;z-index:2;bottom:16px;left:50%;
+    transform:translateX(-50%);display:inline-flex;align-items:center;gap:7px;
+    font-size:12px;font-weight:600;padding:7px 14px;border-radius:999px;
+    background:rgba(10,4,20,.5);color:var(--teal);border:1px solid rgba(62,224,224,.42);
+    backdrop-filter:blur(6px);white-space:nowrap;transition:opacity .35s;
+    animation:hintpulse 2.6s ease-in-out infinite}
+  @keyframes hintpulse{0%,100%{opacity:.7}50%{opacity:1}}
+  .project .visual .map-reveal{position:absolute;inset:0;z-index:3;opacity:0;
+    pointer-events:none;transform:scale(1.06);background:var(--bg0);
+    transition:opacity .5s ease, transform .5s ease}
+  .project .visual .map-reveal img{position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;display:block}
+  .project .visual .map-reveal .map-cap{position:absolute;left:0;right:0;bottom:0;
+    z-index:1;text-align:center;font-family:'Bungee',cursive;font-size:14px;
+    letter-spacing:.5px;color:var(--ink);padding:18px 12px 14px;
+    background:linear-gradient(0deg, rgba(10,4,20,.94), transparent);
+    text-shadow:0 2px 10px rgba(0,0,0,.85)}
+  .project .visual .map-reveal .map-cap span{display:block;font-family:'Poppins',sans-serif;
+    font-size:11px;font-weight:500;letter-spacing:0;color:var(--muted);margin-top:4px}
+  .project .visual.flipped .map-reveal{opacity:1;transform:none}
+  .project .visual.flipped .tap-hint{opacity:0}
   .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;
     padding:7px 15px;border-radius:999px;background:rgba(255,213,107,.12);
     color:var(--gold);border:1px solid rgba(255,213,107,.35);margin-bottom:16px}
@@ -249,10 +272,15 @@
     </div>
 
     <article class="project reveal">
-      <div class="visual">
+      <div class="visual" role="button" tabindex="0" aria-label="Bloom-Weg-Vorschau anzeigen">
         <div class="bgphoto"><img src="assets/bloom-visual.jpg" alt="" /></div>
         <div class="appicon"><img src="assets/bloom-icon.png" alt="Bloom App-Icon" /></div>
         <div class="appname">🌸 Bloom</div>
+        <div class="tap-hint">👆 Tippen für einen Vorgeschmack</div>
+        <div class="map-reveal">
+          <img src="assets/bloom-map.jpg" alt="Bloom – der „Bloom-Weg", die Level-Karte des Spiels" />
+          <div class="map-cap">Der Bloom-Weg<br><span>bald im Google&nbsp;Play · tippen zum Schließen</span></div>
+        </div>
       </div>
       <div class="info">
         <span class="badge">🌱 In Entwicklung · bald im Google&nbsp;Play&nbsp;Store</span>
@@ -357,6 +385,14 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
   },{threshold:.14});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Bloom-Projektkarte: Klick/Tap (oder Enter/Space) → Bloom-Weg-Vorschau ein-/ausblenden
+  document.querySelectorAll('.project .visual').forEach(v=>{
+    v.addEventListener('click',()=>v.classList.toggle('flipped'));
+    v.addEventListener('keydown',e=>{
+      if(e.key==='Enter'||e.key===' '){ e.preventDefault(); v.classList.toggle('flipped'); }
+    });
+  });
 </script>
 </body>
 </html>
