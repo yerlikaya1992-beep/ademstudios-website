@@ -150,7 +150,11 @@
     animation:hintpulse 2.6s ease-in-out infinite}
   @keyframes hintpulse{0%,100%{opacity:.7}50%{opacity:1}}
   .project .visual .map-reveal{position:absolute;inset:0;z-index:3;opacity:0;
-    pointer-events:none;transform:scale(1.06);background:var(--bg0);
+    pointer-events:none;transform:scale(1.06);
+    background:
+      radial-gradient(55% 45% at 19% 27%, rgba(164,92,255,.48), transparent 72%),
+      radial-gradient(55% 48% at 82% 74%, rgba(62,224,224,.32), transparent 72%),
+      var(--bg1);
     transition:opacity .5s ease, transform .5s ease}
   .project .visual .map-reveal img{position:absolute;inset:0;z-index:1;width:100%;height:100%;
     object-fit:contain;display:block}
