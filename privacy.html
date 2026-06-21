@@ -3,86 +3,163 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0414" />
+<meta name="robots" content="index,follow" />
 <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
 <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png" />
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/bungee-400-latin.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/poppins-400-latin.woff2" crossorigin />
+<link rel="stylesheet" href="assets/fonts/fonts.css" />
 <title>Privacy Policy – Bloom (Adem Studios)</title>
 <style>
-  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.65;color:#222;max-width:780px;margin:0 auto;padding:28px 20px 90px;background:#fafafa}
-  h1{font-size:1.7rem;color:#6a1b9a;margin-bottom:2px}
-  h2{font-size:1.2rem;color:#6a1b9a;margin-top:36px;border-bottom:1px solid #eee;padding-bottom:6px}
-  a{color:#8e24aa}
-  .muted{color:#777;font-size:.92rem}
-  .box{background:#fff;border:1px solid #eee;border-radius:10px;padding:14px 18px;margin:18px 0}
-  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.94rem}
-  th,td{border:1px solid #e6e6e6;padding:8px 10px;text-align:left;vertical-align:top}
-  th{background:#f5edf8}
-  ul{padding-left:22px}
-  footer{margin-top:54px;font-size:.85rem;color:#999;border-top:1px solid #eee;padding-top:16px}
-  .nav{font-size:.9rem;margin-bottom:18px}
-  code{background:#f0e6f5;padding:1px 5px;border-radius:4px;font-size:.9em}
+  :root{
+    --teal:#3ee0e0;--violet:#a45cff;--magenta:#ff3d9a;--gold:#ffd56b;
+    --ink:#f2ecff;--muted:#b6a6d6;--bg0:#0a0414;--bg1:#160a2b;
+    --card:rgba(255,255,255,.045);--line:rgba(164,92,255,.22);--radius:18px;--maxw:880px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--bg0);
+    line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .bg-glows{position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:
+      radial-gradient(60vw 60vw at 12% 8%, rgba(164,92,255,.20), transparent 60%),
+      radial-gradient(55vw 55vw at 92% 14%, rgba(62,224,224,.14), transparent 60%),
+      radial-gradient(70vw 70vw at 50% 115%, rgba(255,61,154,.12), transparent 60%),
+      linear-gradient(180deg, var(--bg0), var(--bg1) 55%, var(--bg0));}
+  .grain{position:fixed;inset:0;z-index:-1;opacity:.5;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.035) 1px, transparent 1px);background-size:3px 3px}
+  a{color:var(--teal);text-decoration:none;transition:color .2s}
+  a:hover{color:var(--violet)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+    background:linear-gradient(180deg, rgba(10,4,20,.82), rgba(10,4,20,.32));
+    border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Bungee',system-ui,sans-serif;font-size:17px}
+  .brand img{width:30px;height:30px;filter:drop-shadow(0 0 10px rgba(62,224,224,.5))}
+  .brand b{background:linear-gradient(90deg,var(--teal),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .nav-links{display:flex;gap:20px;font-size:13.5px;font-weight:500}
+  .nav-links a{color:var(--muted)}
+  .nav-links a:hover{color:var(--teal)}
+
+  main{padding:46px 0 30px}
+  h1{font-family:'Bungee',system-ui,sans-serif;font-size:clamp(28px,5.5vw,44px);line-height:1.05;margin-bottom:6px}
+  h1 span{background:linear-gradient(90deg,var(--teal),var(--violet) 55%,var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+  h2{font-size:1.18rem;color:var(--teal);margin-top:36px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  p{margin:10px 0}
+  .muted{color:var(--muted);font-size:.95rem}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:20px 0}
+  code{background:rgba(164,92,255,.16);padding:1px 6px;border-radius:5px;font-size:.9em;color:var(--ink)}
+  ul{padding-left:24px;margin:10px 0}
+  li{margin:6px 0}
+  .table-scroll{overflow-x:auto;margin:16px 0;border-radius:var(--radius);border:1px solid var(--line)}
+  table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:560px}
+  th,td{border-bottom:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
+  th{background:rgba(164,92,255,.14);color:var(--ink);font-weight:600}
+  td{color:var(--muted)}
+  td strong{color:var(--ink)}
+  tr:last-child td{border-bottom:none}
+
+  footer{border-top:1px solid var(--line);padding:30px 0;margin-top:48px}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .foot-links{display:flex;gap:20px;font-size:14px;flex-wrap:wrap}
+  .foot-links a{color:var(--muted)}
+  .foot-links a:hover{color:var(--teal)}
+  .copy{color:var(--muted);font-size:13px;margin-top:14px}
 </style>
 </head>
 <body>
+<div class="bg-glows"></div><div class="grain"></div>
 
-<div class="nav"><a href="index.html">&larr; Adem Studios</a> · <a href="datenschutz.html">Deutsch</a> · <a href="impressum.html">Impressum/Legal</a></div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/adem-emblem.png" alt="" />
+      <span><b>ADEM&nbsp;STUDIOS</b></span>
+    </a>
+    <nav class="nav-links">
+      <a href="datenschutz.html">Deutsch</a>
+      <a href="impressum.html">Impressum/Legal</a>
+      <a href="index.html">&larr; Home</a>
+    </nav>
+  </div>
+</header>
 
-<h1>Privacy Policy</h1>
-<p class="muted">for the app <strong>Bloom</strong> (package <code>com.ademstudios.bloom</code>) · Provider: Adem Studios</p>
+<main class="wrap">
+  <h1><span>Privacy Policy</span></h1>
+  <p class="muted">for the app <strong>Bloom</strong> (package <code>com.ademstudios.bloom</code>) · Provider: Adem Studios</p>
 
-<p>Your privacy matters to us. This policy explains, in line with the EU General Data Protection Regulation (GDPR), which personal data is processed in the app "Bloom", for which purposes, and what rights you have.</p>
+  <p>Your privacy matters to us. This policy explains, in line with the EU General Data Protection Regulation (GDPR), which personal data is processed in the app "Bloom", for which purposes, and what rights you have.</p>
 
-<h2>1. Controller</h2>
-<div class="box">
-  <strong>Adem Yerlikaya</strong> (trading as Adem Studios)<br>
-  Pallasstraße 6A<br>
-  10781 Berlin, Germany<br>
-  E-mail: <a href="mailto:adem.studios@web.de">adem.studios@web.de</a>
-</div>
+  <h2>1. Controller</h2>
+  <div class="box">
+    <strong>Adem Yerlikaya</strong> (trading as Adem Studios)<br>
+    Pallasstraße 6A<br>
+    10781 Berlin, Germany<br>
+    E-mail: <a href="mailto:adem.studios@web.de">adem.studios@web.de</a>
+  </div>
 
-<h2>2. Principle</h2>
-<p>Bloom is a casual merge game that can be played offline. Most of your data — in particular your game progress and settings — is stored <strong>locally on your device only</strong> and is not transmitted to us. Personal data is processed only to the extent described below through embedded Google services.</p>
+  <h2>2. Principle</h2>
+  <p>Bloom is a casual merge game that can be played offline. Most of your data — in particular your game progress and settings — is stored <strong>locally on your device only</strong> and is not transmitted to us. Personal data is processed only to the extent described below through embedded Google services.</p>
 
-<h2>3. Data stored locally on your device</h2>
-<p>Game progress, stars earned, high scores, language and sound/vibration settings, and the "Bloom Pro" status are stored locally. This data leaves your device only if you use cloud saving via Google Play Games (see section 4). Uninstalling the app deletes the local data.</p>
+  <h2>3. Data stored locally on your device</h2>
+  <p>Game progress, stars earned, high scores, language and sound/vibration settings, and the "Bloom Pro" status are stored locally. This data leaves your device only if you use cloud saving via Google Play Games (see section 4). Uninstalling the app deletes the local data.</p>
 
-<h2>4. Embedded Google services &amp; data processed</h2>
-<table>
-  <tr><th>Service</th><th>Purpose</th><th>Typical data</th><th>Legal basis</th></tr>
-  <tr><td><strong>Google Play Games</strong></td><td>Sign-in, leaderboard, cloud save of game progress</td><td>Play Games player ID, game progress, high score</td><td>Art. 6(1)(b) GDPR (providing the feature you use)</td></tr>
-  <tr><td><strong>Google AdMob</strong> (ads)</td><td>Showing ads (banner after game over, optional "second chance" video)</td><td>Advertising ID, device/usage data, truncated IP, ad interaction</td><td>Art. 6(1)(a) GDPR (consent, see section 5)</td></tr>
-  <tr><td><strong>Google UMP</strong></td><td>Collecting &amp; storing your advertising consent</td><td>Consent status</td><td>Art. 6(1)(c)/(f) GDPR</td></tr>
-  <tr><td><strong>Google Play Billing</strong></td><td>Processing the "Bloom Pro" purchase (remove ads)</td><td>Purchase/order data, purchase token (payment handled by Google)</td><td>Art. 6(1)(b) GDPR (contract)</td></tr>
-  <tr><td><strong>Google Play In-App Review</strong></td><td>Showing the rating dialog after a success moment</td><td>no personal data accessible to us</td><td>Art. 6(1)(f) GDPR</td></tr>
-  <tr><td><strong>Firebase Crashlytics</strong></td><td>Automatic crash reports to improve stability</td><td>Crash stack trace, device/OS info, app state, anonymous install ID</td><td>Art. 6(1)(f) GDPR (legitimate interest in a stable app)</td></tr>
-  <tr><td><strong>Firebase Analytics</strong></td><td>Anonymized usage/reach analysis</td><td>App instance ID, advertising ID, event/usage data, device/region</td><td>Art. 6(1)(a) GDPR (consent, see section 5)</td></tr>
-</table>
-<p class="muted">Google privacy information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> · Ads: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></p>
+  <h2>4. Embedded Google services &amp; data processed</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>Service</th><th>Purpose</th><th>Typical data</th><th>Legal basis</th></tr>
+    <tr><td><strong>Google Play Games</strong></td><td>Sign-in, leaderboard, cloud save of game progress</td><td>Play Games player ID, game progress, high score</td><td>Art. 6(1)(b) GDPR (providing the feature you use)</td></tr>
+    <tr><td><strong>Google AdMob</strong> (ads)</td><td>Showing ads (banner after game over, optional "second chance" video)</td><td>Advertising ID, device/usage data, truncated IP, ad interaction</td><td>Art. 6(1)(a) GDPR (consent, see section 5)</td></tr>
+    <tr><td><strong>Google UMP</strong></td><td>Collecting &amp; storing your advertising consent</td><td>Consent status</td><td>Art. 6(1)(c)/(f) GDPR</td></tr>
+    <tr><td><strong>Google Play Billing</strong></td><td>Processing the "Bloom Pro" purchase (remove ads)</td><td>Purchase/order data, purchase token (payment handled by Google)</td><td>Art. 6(1)(b) GDPR (contract)</td></tr>
+    <tr><td><strong>Google Play In-App Review</strong></td><td>Showing the rating dialog after a success moment</td><td>no personal data accessible to us</td><td>Art. 6(1)(f) GDPR</td></tr>
+    <tr><td><strong>Firebase Crashlytics</strong></td><td>Automatic crash reports to improve stability</td><td>Crash stack trace, device/OS info, app state, anonymous install ID</td><td>Art. 6(1)(f) GDPR (legitimate interest in a stable app)</td></tr>
+    <tr><td><strong>Firebase Analytics</strong></td><td>Anonymized usage/reach analysis</td><td>App instance ID, advertising ID, event/usage data, device/region</td><td>Art. 6(1)(a) GDPR (consent, see section 5)</td></tr>
+  </table>
+  </div>
+  <p class="muted">Google privacy information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> · Ads: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></p>
 
-<h2>5. Consent &amp; withdrawal (ads / analytics)</h2>
-<p>Where legally required (in particular in the EEA), your <strong>consent</strong> is obtained via the Google User Messaging Platform before personalized ads or analytics processing. You can withdraw consent at any time with future effect:</p>
-<ul>
-  <li>in the app under <em>Settings → "Withdraw consent"</em> (shown where required for your region), or</li>
-  <li>by purchasing "Bloom Pro", which permanently disables advertising.</li>
-</ul>
+  <h2>5. Consent &amp; withdrawal (ads / analytics)</h2>
+  <p>Where legally required (in particular in the EEA), your <strong>consent</strong> is obtained via the Google User Messaging Platform before personalized ads or analytics processing. You can withdraw consent at any time with future effect:</p>
+  <ul>
+    <li>in the app under <em>Settings → "Withdraw consent"</em> (shown where required for your region), or</li>
+    <li>by purchasing "Bloom Pro", which permanently disables advertising.</li>
+  </ul>
 
-<h2>6. Recipients &amp; international transfers</h2>
-<p>The recipient of the data in section 4 is Google. Data may be transferred to servers in the USA. Google LLC is certified under the <strong>EU-US Data Privacy Framework</strong>; EU Standard Contractual Clauses serve as an additional safeguard (Art. 46 GDPR).</p>
+  <h2>6. Recipients &amp; international transfers</h2>
+  <p>The recipient of the data in section 4 is Google. Data may be transferred to servers in the USA. Google LLC is certified under the <strong>EU-US Data Privacy Framework</strong>; EU Standard Contractual Clauses serve as an additional safeguard (Art. 46 GDPR).</p>
 
-<h2>7. Retention</h2>
-<p>Local data remains until you uninstall the app or reset it within the app. Retention of data processed by Google follows their privacy terms. Crash and analytics data are kept in pseudonymized form only as long as necessary.</p>
+  <h2>7. Retention</h2>
+  <p>Local data remains until you uninstall the app or reset it within the app. Retention of data processed by Google follows their privacy terms. Crash and analytics data are kept in pseudonymized form only as long as necessary.</p>
 
-<h2>8. Your rights</h2>
-<p>Under the GDPR you have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction (Art. 18), data portability (Art. 20) and objection (Art. 21). You may withdraw consent at any time (section 5). You also have the right to lodge a complaint with a data protection supervisory authority. To exercise your rights, contact the e-mail address above.</p>
+  <h2>8. Your rights</h2>
+  <p>Under the GDPR you have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction (Art. 18), data portability (Art. 20) and objection (Art. 21). You may withdraw consent at any time (section 5). You also have the right to lodge a complaint with a data protection supervisory authority. To exercise your rights, contact the e-mail address above.</p>
 
-<h2>9. Children</h2>
-<p>Bloom is not directed at children under 13. We do not knowingly collect personal data from children without parental consent.</p>
+  <h2>9. Children</h2>
+  <p>Bloom is not directed at children under 13. We do not knowingly collect personal data from children without parental consent.</p>
 
-<h2>10. Hosting of this page</h2>
-<p>This page is served via GitHub Pages (GitHub, Inc., USA), which processes technically necessary server log data (incl. IP address) when the page is opened.</p>
+  <h2>10. Hosting of this page</h2>
+  <p>This page is served via GitHub Pages (GitHub, Inc., USA), which processes technically necessary server log data (incl. IP address) when the page is opened.</p>
+</main>
 
 <footer>
-  Last updated: 13 June 2026 · Adem Studios · Bloom
+  <div class="wrap foot">
+    <a class="brand" href="index.html" style="font-size:15px">
+      <img src="assets/adem-emblem.png" alt="" style="width:24px;height:24px" />
+      <span><b>ADEM&nbsp;STUDIOS</b></span>
+    </a>
+    <nav class="foot-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="privacy.html">Privacy (EN)</a>
+      <a href="mailto:adem.studios@web.de">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap"><p class="copy">Last updated: 13 June 2026 · © 2026 Adem Studios · Berlin · Made with 💜</p></div>
 </footer>
 
 </body>

@@ -3,54 +3,122 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0414" />
+<meta name="robots" content="index,follow" />
 <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
 <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png" />
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-<title>Impressum – Bloom (Adem Studios)</title>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/bungee-400-latin.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/poppins-400-latin.woff2" crossorigin />
+<link rel="stylesheet" href="assets/fonts/fonts.css" />
+<title>Impressum – Adem Studios</title>
 <style>
-  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.65;color:#222;max-width:780px;margin:0 auto;padding:28px 20px 90px;background:#fafafa}
-  h1{font-size:1.7rem;color:#6a1b9a;margin-bottom:2px}
-  h2{font-size:1.15rem;color:#6a1b9a;margin-top:32px;border-bottom:1px solid #eee;padding-bottom:6px}
-  a{color:#8e24aa}
-  .muted{color:#777;font-size:.92rem}
-  .box{background:#fff;border:1px solid #eee;border-radius:10px;padding:14px 18px;margin:18px 0}
-  code{background:#f0e6f5;padding:1px 5px;border-radius:4px;font-size:.9em}
-  footer{margin-top:54px;font-size:.85rem;color:#999;border-top:1px solid #eee;padding-top:16px}
-  .nav{font-size:.9rem;margin-bottom:18px}
+  :root{
+    --teal:#3ee0e0;--violet:#a45cff;--magenta:#ff3d9a;--gold:#ffd56b;
+    --ink:#f2ecff;--muted:#b6a6d6;--bg0:#0a0414;--bg1:#160a2b;
+    --card:rgba(255,255,255,.045);--line:rgba(164,92,255,.22);--radius:18px;--maxw:820px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--bg0);
+    line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .bg-glows{position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:
+      radial-gradient(60vw 60vw at 12% 8%, rgba(164,92,255,.20), transparent 60%),
+      radial-gradient(55vw 55vw at 92% 14%, rgba(62,224,224,.14), transparent 60%),
+      radial-gradient(70vw 70vw at 50% 115%, rgba(255,61,154,.12), transparent 60%),
+      linear-gradient(180deg, var(--bg0), var(--bg1) 55%, var(--bg0));}
+  .grain{position:fixed;inset:0;z-index:-1;opacity:.5;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.035) 1px, transparent 1px);background-size:3px 3px}
+  a{color:var(--teal);text-decoration:none;transition:color .2s}
+  a:hover{color:var(--violet)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+    background:linear-gradient(180deg, rgba(10,4,20,.82), rgba(10,4,20,.32));
+    border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Bungee',system-ui,sans-serif;font-size:17px}
+  .brand img{width:30px;height:30px;filter:drop-shadow(0 0 10px rgba(62,224,224,.5))}
+  .brand b{background:linear-gradient(90deg,var(--teal),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .nav-links{display:flex;gap:20px;font-size:13.5px;font-weight:500}
+  .nav-links a{color:var(--muted)}
+  .nav-links a:hover{color:var(--teal)}
+
+  main{padding:46px 0 30px}
+  h1{font-family:'Bungee',system-ui,sans-serif;font-size:clamp(30px,6vw,46px);line-height:1.05;margin-bottom:6px}
+  h1 span{background:linear-gradient(90deg,var(--teal),var(--violet) 55%,var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+  h2{font-size:1.18rem;color:var(--teal);margin-top:34px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  p{margin:10px 0}
+  .muted{color:var(--muted);font-size:.95rem}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:20px 0}
+  code{background:rgba(164,92,255,.16);padding:1px 6px;border-radius:5px;font-size:.9em;color:var(--ink)}
+
+  footer{border-top:1px solid var(--line);padding:30px 0;margin-top:48px}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .foot-links{display:flex;gap:20px;font-size:14px;flex-wrap:wrap}
+  .foot-links a{color:var(--muted)}
+  .foot-links a:hover{color:var(--teal)}
+  .copy{color:var(--muted);font-size:13px;margin-top:14px}
 </style>
 </head>
 <body>
+<div class="bg-glows"></div><div class="grain"></div>
 
-<div class="nav"><a href="index.html">&larr; Adem Studios</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="privacy.html">English</a></div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="assets/adem-emblem.png" alt="" />
+      <span><b>ADEM&nbsp;STUDIOS</b></span>
+    </a>
+    <nav class="nav-links">
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="privacy.html">English</a>
+      <a href="index.html">&larr; Start</a>
+    </nav>
+  </div>
+</header>
 
-<h1>Impressum</h1>
-<p class="muted">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
+<main class="wrap">
+  <h1><span>Impressum</span></h1>
+  <p class="muted">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
 
-<div class="box">
-  <strong>Adem Yerlikaya</strong><br>
-  Geschäftsbezeichnung: Adem Studios<br>
-  Pallasstraße 6A<br>
-  10781 Berlin, Deutschland
-</div>
+  <div class="box">
+    <strong>Adem Yerlikaya</strong><br>
+    Geschäftsbezeichnung: Adem Studios<br>
+    Pallasstraße 6A<br>
+    10781 Berlin, Deutschland
+  </div>
 
-<h2>Kontakt</h2>
-<p>
-  E-Mail: <a href="mailto:adem.studios@web.de">adem.studios@web.de</a>
-</p>
+  <h2>Kontakt</h2>
+  <p>E-Mail: <a href="mailto:adem.studios@web.de">adem.studios@web.de</a></p>
 
-<h2>Umsatzsteuer</h2>
-<p>Als Kleinunternehmer im Sinne von § 19 UStG wird keine Umsatzsteuer ausgewiesen.</p>
+  <h2>Umsatzsteuer</h2>
+  <p>Als Kleinunternehmer im Sinne von § 19 UStG wird keine Umsatzsteuer ausgewiesen.</p>
 
-<h2>Verantwortlich für den Inhalt</h2>
-<p>Adem Yerlikaya, Anschrift wie oben.</p>
+  <h2>Verantwortlich für den Inhalt</h2>
+  <p>Adem Yerlikaya, Anschrift wie oben.</p>
 
-<h2>EU-Streitschlichtung</h2>
-<p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-<a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>.
-Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+  <h2>EU-Streitschlichtung</h2>
+  <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+  <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>.
+  Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+</main>
 
 <footer>
-  Stand: 13. Juni 2026 · Adem Studios · Bloom
+  <div class="wrap foot">
+    <a class="brand" href="index.html" style="font-size:15px">
+      <img src="assets/adem-emblem.png" alt="" style="width:24px;height:24px" />
+      <span><b>ADEM&nbsp;STUDIOS</b></span>
+    </a>
+    <nav class="foot-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="privacy.html">Privacy (EN)</a>
+      <a href="mailto:adem.studios@web.de">Kontakt</a>
+    </nav>
+  </div>
+  <div class="wrap"><p class="copy">Stand: 13. Juni 2026 · © 2026 Adem Studios · Berlin · Mit 💜 gemacht</p></div>
 </footer>
 
 </body>
