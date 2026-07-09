@@ -121,9 +121,13 @@
     <tr><td><strong>Google Play In-App Review</strong></td><td>Showing the rating dialog after a success moment</td><td>no personal data accessible to us</td><td>Art. 6(1)(f) GDPR</td></tr>
     <tr><td><strong>Firebase Crashlytics</strong></td><td>Automatic crash reports to improve stability</td><td>Crash stack trace, device/OS info, app state, anonymous install ID</td><td>Art. 6(1)(f) GDPR (legitimate interest in a stable app)</td></tr>
     <tr><td><strong>Firebase Analytics</strong></td><td>Anonymized usage/reach analysis</td><td>App instance ID, advertising ID, event/usage data, device/region</td><td>Art. 6(1)(a) GDPR (consent, see section 5)</td></tr>
+    <tr><td><strong>Firebase Remote Config</strong></td><td>Loading configuration values on start (e.g. active in-app events and gameplay fine-tuning) to adjust content without an app update</td><td>anonymous Firebase installation ID (no names, e-mail addresses or location data)</td><td>Art. 6(1)(f) GDPR (legitimate interest in up-to-date content/event control)</td></tr>
+    <tr><td><strong>Firebase Cloud Messaging</strong> (push notifications)</td><td>Optional reminders &amp; event hints – only after you explicitly enable them in the app settings (off by default)</td><td>device token (not generated without your consent)</td><td>Art. 6(1)(a) GDPR (consent, revocable at any time)</td></tr>
   </table>
   </div>
   <p class="muted">Google privacy information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> · Ads: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></p>
+
+  <p class="muted"><strong>Push notifications (Firebase Cloud Messaging)</strong> are off by default. A device token is only created once you explicitly enable notifications in the app settings; no message is sent without your consent. You can disable them at any time in the app settings or in your Android system settings. All Firebase services are additionally covered by Google's data processing terms (Firebase Data Processing and Security Terms) as part of the Firebase Terms of Service.</p>
 
   <h2>5. Consent &amp; withdrawal (ads / analytics)</h2>
   <p>Where legally required (in particular in the EEA), your <strong>consent</strong> is obtained via the Google User Messaging Platform before personalized ads or analytics processing. You can withdraw consent at any time with future effect:</p>
@@ -161,7 +165,7 @@
       <a href="mailto:adem.studios@web.de">Contact</a>
     </nav>
   </div>
-  <div class="wrap"><p class="copy">Last updated: 13 June 2026 · © 2026 Adem Studios · Berlin · Made with 💜</p></div>
+  <div class="wrap"><p class="copy">Last updated: 9 July 2026 · © 2026 Adem Studios · Berlin · Made with 💜</p></div>
 </footer>
 
 </body>

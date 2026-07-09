@@ -160,10 +160,24 @@
       <td>App-Instanz-ID, Werbe-ID, Ereignis-/Nutzungsdaten, Geräte-/Regionsdaten</td>
       <td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung, siehe Punkt 5)</td>
     </tr>
+    <tr>
+      <td><strong>Firebase Remote Config</strong></td>
+      <td>Laden von Konfigurationswerten beim Start (z. B. aktive In-App-Events und Spiel-Feinabstimmungen), um Inhalte ohne App-Update anzupassen</td>
+      <td>anonyme Firebase-Installations-ID (keine Namen, E-Mail-Adressen oder Standortdaten)</td>
+      <td>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an aktueller Inhalts-/Event-Steuerung)</td>
+    </tr>
+    <tr>
+      <td><strong>Firebase Cloud Messaging</strong> (Push-Benachrichtigungen)</td>
+      <td>Optionale Erinnerungen &amp; Event-Hinweise – nur nach ausdrücklicher Aktivierung in den App-Einstellungen (standardmäßig ausgeschaltet)</td>
+      <td>Geräte-Token (wird ohne deine Zustimmung nicht erzeugt)</td>
+      <td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung, jederzeit widerrufbar)</td>
+    </tr>
   </table>
   </div>
 
   <p class="muted">Datenschutzinformationen von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> · Umgang mit Werbung: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a> · Google Play Games: <a href="https://support.google.com/googleplay/answer/6135186" target="_blank" rel="noopener">support.google.com</a></p>
+
+  <p class="muted"><strong>Push-Benachrichtigungen (Firebase Cloud Messaging)</strong> sind standardmäßig ausgeschaltet. Ein Geräte-Token wird erst erzeugt, wenn du Benachrichtigungen in den App-Einstellungen ausdrücklich aktivierst; ohne deine Zustimmung wird keine Nachricht gesendet. Du kannst sie jederzeit in den App-Einstellungen oder in den Android-Systemeinstellungen wieder deaktivieren. Für alle Firebase-Dienste gelten ergänzend die Auftragsverarbeitungsbedingungen von Google (Firebase Data Processing and Security Terms) als Teil der Firebase-Nutzungsbedingungen.</p>
 
   <h2>5. Einwilligung &amp; Widerruf (Werbung / Analyse)</h2>
   <p>Vor der Anzeige personalisierter Werbung und vor der analytischen Auswertung wird – soweit gesetzlich erforderlich (insbesondere im EWR) – über die Google User Messaging Platform deine <strong>Einwilligung</strong> eingeholt. Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen:</p>
@@ -206,7 +220,7 @@
       <a href="mailto:adem.studios@web.de">Kontakt</a>
     </nav>
   </div>
-  <div class="wrap"><p class="copy">Stand: 13. Juni 2026 · © 2026 Adem Studios · Berlin · Mit 💜 gemacht</p></div>
+  <div class="wrap"><p class="copy">Stand: 9. Juli 2026 · © 2026 Adem Studios · Berlin · Mit 💜 gemacht</p></div>
 </footer>
 
 </body>
