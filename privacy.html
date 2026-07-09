@@ -71,6 +71,15 @@
   .foot-links a{color:var(--muted)}
   .foot-links a:hover{color:var(--teal)}
   .copy{color:var(--muted);font-size:13px;margin-top:14px}
+
+  @media (max-width:560px){
+    .nav{gap:8px}
+    .brand{font-size:15px}
+    .brand img{width:24px;height:24px}
+    .nav-links{gap:14px;font-size:12.5px}
+    .nav-links a[href="index.html"]{display:none} /* "Start" redundant: Logo linkt schon dorthin */
+    h1{font-size:clamp(20px,5.2vw,44px)}
+  }
 </style>
 </head>
 <body>
