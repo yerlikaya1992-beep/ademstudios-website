@@ -151,6 +151,8 @@
   .project .visual .appicon img{width:100%;height:100%;object-fit:cover;display:block}
   .project .visual .appname{position:relative;z-index:1;font-family:'Bungee','Arial Black',system-ui,sans-serif;
     font-size:24px;letter-spacing:1px;text-shadow:0 2px 16px rgba(0,0,0,.75)}
+  .project .visual .appname .grad{background:linear-gradient(100deg,#3EE0E0,#A45CFF,#FF3D9A);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
   /* Klickbare Karte → kleiner Vorgeschmack auf den „Bloom-Weg" */
   .project .visual{cursor:pointer}
   .project .visual .tap-hint{position:absolute;z-index:2;bottom:16px;left:50%;
@@ -296,6 +298,7 @@
     </a>
     <nav class="nav-links">
       <a href="#projekte">Projekte</a>
+      <a href="/bloom/">Bloom</a>
       <a href="#studio">Studio</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
@@ -332,7 +335,7 @@
       <div class="visual" role="button" tabindex="0" aria-label="Bloom-Weg-Vorschau anzeigen">
         <div class="bgphoto"><img src="assets/bloom-visual.jpg" alt="" /></div>
         <div class="appicon"><img src="assets/bloom-icon.png" alt="Bloom App-Icon" /></div>
-        <div class="appname">🌸 Bloom</div>
+        <div class="appname">🌸 <span class="grad">Bloom</span></div>
         <div class="tap-hint">👆 Tippen für einen Vorgeschmack</div>
         <div class="map-reveal">
           <img src="assets/bloom-map.jpg" alt="Bloom – der „Bloom-Weg", die Level-Karte des Spiels" />
@@ -356,6 +359,9 @@
           <span class="chip">⚖️ <b>Fair</b> &amp; kein Pay-to-Win</span>
           <span class="chip">☁️ <b>Cloud</b>-Speicher</span>
           <span class="chip">🏆 <b>Bestenliste</b></span>
+        </div>
+        <div style="margin-top:24px">
+          <a class="btn btn-primary" href="/bloom/">🌸 Zur Bloom-Seite →</a>
         </div>
       </div>
     </article>
