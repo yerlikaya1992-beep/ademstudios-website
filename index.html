@@ -4,18 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Adem Studios — Games, Apps &amp; technische Entwicklungsprojekte aus Berlin</title>
-<meta name="description" content="Adem Studios ist eine unabhängige Entwicklungsmarke aus Berlin für Games, Apps und technische Forschungs- und Entwicklungsprojekte. Aktuell: das Merge-Puzzle Bloom und das F&amp;E-Projekt E-BIKE DIAG." />
+<meta name="description" content="Adem Studios ist eine unabhängige Entwicklungsmarke aus Berlin für Games, Apps und technische Forschungs- und Entwicklungsprojekte. Aktuell: Bloom als 3D-Action-RPG in Neuentwicklung und das F&amp;E-Projekt E-BIKE DIAG." />
 <meta name="theme-color" content="#12061f" />
 
 <!-- Open Graph (für Links in WhatsApp / Social) -->
 <meta property="og:title" content="Adem Studios — Games, Apps &amp; technische Entwicklungsprojekte aus Berlin" />
 <meta property="og:description" content="Eine unabhängige Entwicklungsmarke aus Berlin: Games, Apps und technische Forschungs- und Entwicklungsprojekte. Aktuell in Arbeit: Bloom und E-BIKE DIAG." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://ademstudios.com/assets/og-image.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:type" content="image/png" />
-<meta name="twitter:card" content="summary_large_image" />
 <meta property="og:url" content="https://ademstudios.com/" />
 
 <!-- Kanonische URL: konsolidiert www-Duplikate + http auf die Apex-Startseite (SEO) -->
@@ -136,50 +131,22 @@
     background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
     padding:34px;margin-top:34px;
     box-shadow:0 30px 80px -40px rgba(164,92,255,.6)}
-  .project .visual{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;
+  /* Projekt-Visual mit Concept-Art (BLOOM) */
+  .project .visual-art{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;
     border:1px solid var(--line);box-shadow:0 24px 60px -24px rgba(0,0,0,.8);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px}
-  .project .visual .bgphoto{position:absolute;inset:0;z-index:0}
-  .project .visual .bgphoto img{width:100%;height:100%;object-fit:cover;
-    filter:blur(2px) brightness(.42) saturate(1.15);transform:scale(1.08)}
-  .project .visual .bgphoto::after{content:"";position:absolute;inset:0;
-    background:radial-gradient(circle at 50% 42%, rgba(164,92,255,.30), rgba(10,4,20,.88) 76%)}
-  .project .visual .appicon{position:relative;z-index:1;width:46%;aspect-ratio:1;
-    border-radius:24%;overflow:hidden;
-    box-shadow:0 0 0 1px rgba(255,255,255,.18), 0 18px 50px -8px rgba(62,224,224,.5);
-    animation:float 5.5s ease-in-out infinite}
-  .project .visual .appicon img{width:100%;height:100%;object-fit:cover;display:block}
-  .project .visual .appname{position:relative;z-index:1;font-family:'Bungee','Arial Black',system-ui,sans-serif;
-    font-size:24px;letter-spacing:1px;text-shadow:0 2px 16px rgba(0,0,0,.75)}
-  .project .visual .appname .grad{background:linear-gradient(100deg,#3EE0E0,#A45CFF,#FF3D9A);
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-  /* Klickbare Karte → kleiner Vorgeschmack auf den „Bloom-Weg" */
-  .project .visual{cursor:pointer}
-  .project .visual .tap-hint{position:absolute;z-index:2;bottom:16px;left:50%;
-    transform:translateX(-50%);display:inline-flex;align-items:center;gap:7px;
-    font-size:12px;font-weight:600;padding:7px 14px;border-radius:999px;
-    background:rgba(10,4,20,.5);color:var(--teal);border:1px solid rgba(62,224,224,.42);
-    backdrop-filter:blur(6px);white-space:nowrap;transition:opacity .35s;
-    animation:hintpulse 2.6s ease-in-out infinite}
-  @keyframes hintpulse{0%,100%{opacity:.7}50%{opacity:1}}
-  .project .visual .map-reveal{position:absolute;inset:0;z-index:3;opacity:0;
-    pointer-events:none;transform:scale(1.06);
+    display:flex;align-items:center;justify-content:center;padding:20px 20px 62px;
     background:
-      radial-gradient(55% 45% at 19% 27%, rgba(164,92,255,.48), transparent 72%),
-      radial-gradient(55% 48% at 82% 74%, rgba(62,224,224,.32), transparent 72%),
-      var(--bg1);
-    transition:opacity .5s ease, transform .5s ease}
-  .project .visual .map-reveal img{position:absolute;inset:0;z-index:1;width:100%;height:100%;
-    object-fit:contain;display:block}
-  .project .visual .map-reveal .map-cap{position:absolute;left:0;right:0;bottom:0;
-    z-index:2;text-align:center;font-family:'Bungee','Arial Black',system-ui,sans-serif;font-size:14px;
-    letter-spacing:.5px;color:var(--ink);padding:18px 12px 14px;
-    background:linear-gradient(0deg, rgba(10,4,20,.94), transparent);
-    text-shadow:0 2px 10px rgba(0,0,0,.85)}
-  .project .visual .map-reveal .map-cap span{display:block;font-family:'Poppins',sans-serif;
-    font-size:11px;font-weight:500;letter-spacing:0;color:var(--muted);margin-top:4px}
-  .project .visual.flipped .map-reveal{opacity:1;transform:none}
-  .project .visual.flipped .tap-hint{opacity:0}
+      radial-gradient(62% 46% at 50% 34%, rgba(164,92,255,.32), transparent 72%),
+      radial-gradient(70% 55% at 50% 104%, rgba(62,224,224,.20), transparent 70%),
+      var(--bg1)}
+  .project .visual-art img{max-width:100%;max-height:100%;object-fit:contain;display:block;
+    filter:drop-shadow(0 18px 34px rgba(0,0,0,.6))}
+  .project .visual-art .art-cap{position:absolute;left:0;right:0;bottom:0;z-index:1;
+    text-align:center;font-family:'Bungee','Arial Black',system-ui,sans-serif;font-size:13px;
+    letter-spacing:.5px;color:var(--ink);padding:18px 12px 13px;
+    background:linear-gradient(0deg, rgba(10,4,20,.94), transparent)}
+  .project .visual-art .art-cap span{display:block;font-family:'Poppins',sans-serif;font-size:11px;
+    font-weight:500;letter-spacing:0;color:var(--muted);margin-top:3px}
   .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;
     padding:7px 15px;border-radius:999px;background:rgba(255,213,107,.12);
     color:var(--gold);border:1px solid rgba(255,213,107,.35);margin-bottom:16px}
@@ -277,7 +244,7 @@
   }
   @media(max-width:860px){
     .project{grid-template-columns:1fr;gap:26px}
-    .project .visual,.project .visual-rnd{max-width:300px;margin:0 auto}
+    .project .visual-art,.project .visual-rnd{max-width:300px;margin:0 auto}
     .studio{grid-template-columns:1fr;gap:28px}
     .studio .photo{max-width:340px;margin:0 auto}
     .values{grid-template-columns:1fr}
@@ -293,8 +260,7 @@
   "name": "Adem Studios",
   "url": "https://ademstudios.com/",
   "logo": "https://ademstudios.com/assets/favicon.png",
-  "image": "https://ademstudios.com/assets/og-image.png",
-  "description": "Unabhängige Entwicklungsmarke aus Berlin für Games, Apps und technische Forschungs- und Entwicklungsprojekte. Aktuell in Arbeit: das Merge-Puzzle Bloom und das F&E-Projekt E-BIKE DIAG.",
+  "description": "Unabhängige Entwicklungsmarke aus Berlin für Games, Apps und technische Forschungs- und Entwicklungsprojekte. Aktuell in Arbeit: Bloom als 3D-Action-RPG in Neuentwicklung und das F&E-Projekt E-BIKE DIAG.",
   "email": "adem.studios@web.de",
   "foundingDate": "2026",
   "founder": {
@@ -362,32 +328,21 @@
     </div>
 
     <article class="project reveal">
-      <div class="visual" role="button" tabindex="0" aria-label="Bloom-Weg-Vorschau anzeigen">
-        <div class="bgphoto"><img src="assets/bloom-visual.jpg" alt="" /></div>
-        <div class="appicon"><img src="assets/bloom-icon.png" alt="Bloom App-Icon" /></div>
-        <div class="appname">🌸 <span class="grad">Bloom</span></div>
-        <div class="tap-hint">👆 Tippen für einen Vorgeschmack</div>
-        <div class="map-reveal">
-          <img src="assets/bloom-map.jpg" alt="Bloom – der „Bloom-Weg", die Level-Karte des Spiels" />
-          <div class="map-cap">Der Bloom-Weg<br><span>bald im Google&nbsp;Play · tippen zum Schließen</span></div>
-        </div>
+      <div class="visual-art">
+        <img src="assets/bloom-selka-concept.png" alt="Selka – Concept-Art des ersten Charakters aus BLOOM" />
+        <div class="art-cap">Selka · Concept<br><span>erster Charakter · in Entwicklung</span></div>
       </div>
       <div class="info">
-        <span class="badge">🌱 In Entwicklung · bald im Google&nbsp;Play&nbsp;Store</span>
+        <span class="badge">🌱 In Neuentwicklung</span>
         <h3>Bloom</h3>
-        <div class="kicker">Merge-Puzzle · Suika-Style</div>
-        <p>Lass zauberhafte Wesen verschmelzen, entdecke über 40 Charaktere und tauch ein
-          in eine Welt voller Magie. Ein entspanntes, leicht süchtig machendes Merge-Spiel
-          mit fairem Spielprinzip – ganz ohne Pay-to-Win.</p>
-        <div class="tags">
-          <span class="chip">🎭 <b>40+ Charaktere</b></span>
-          <span class="chip">🎉 <b>Season-Events</b></span>
-          <span class="chip">🏆 <b>Online-Ranglisten</b></span>
-          <span class="chip">🌍 <b>10 Sprachen</b></span>
-          <span class="chip">📴 <b>Offline</b> spielbar</span>
-          <span class="chip">⚖️ <b>Fair</b> &amp; kein Pay-to-Win</span>
-          <span class="chip">☁️ <b>Cloud</b>-Speicher</span>
-        </div>
+        <div class="kicker">3D-Chibi-Trio-Action-RPG · Unity</div>
+        <p>BLOOM wird als schnelles 3D-Chibi-Trio-Action-RPG neu entwickelt. Im Mittelpunkt
+          stehen Echtzeitkämpfe, aktive Charakterwechsel und eine spielbare Evolution, bei der
+          Fortschritt nicht nur Werte erhöht, sondern verändert, was ein Charakter
+          tatsächlich tun kann.</p>
+        <p class="note">ℹ️ Das Spiel befindet sich aktuell in aktiver Entwicklung.
+          Gezeigte Konzepte beschreiben die Entwicklungsrichtung und nicht den vollständigen
+          aktuellen Funktionsumfang.</p>
         <div style="margin-top:24px">
           <a class="btn btn-primary" href="/bloom/">🌸 Zur Bloom-Seite →</a>
         </div>
@@ -457,8 +412,8 @@
       <div class="value reveal">
         <div class="ico">⚖️</div>
         <h4>Fair &amp; transparent</h4>
-        <p>Keine Lootboxen, keine Wartezeiten, keine Tricks. Und ehrlich dabei, was fertig
-          ist – und was noch am Anfang steht.</p>
+        <p>Kein Pay-to-Win, keine künstlichen Frustbremsen, keine Tricks. Und ehrlich dabei,
+          was fertig ist – und was noch am Anfang steht.</p>
       </div>
       <div class="value reveal">
         <div class="ico">✨</div>
@@ -542,14 +497,6 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
   },{threshold:.14});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-  // Bloom-Projektkarte: Klick/Tap (oder Enter/Space) → Bloom-Weg-Vorschau ein-/ausblenden
-  document.querySelectorAll('.project .visual').forEach(v=>{
-    v.addEventListener('click',()=>v.classList.toggle('flipped'));
-    v.addEventListener('keydown',e=>{
-      if(e.key==='Enter'||e.key===' '){ e.preventDefault(); v.classList.toggle('flipped'); }
-    });
-  });
 </script>
 </body>
 </html>
