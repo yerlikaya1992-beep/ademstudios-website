@@ -1,0 +1,71 @@
+
+/* Projekt-Kompass – interaktive persönliche Projektübersicht, Version 2 */
+.compass-section{padding:66px 0 84px;position:relative;isolation:isolate}
+.compass-shell{position:relative;overflow:hidden;border:1px solid #526b6a;background:linear-gradient(145deg,#192a35 3%,#12222c 58%,#122720);border-radius:30px;padding:32px;box-shadow:0 35px 85px #0004}
+.compass-shell:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 75% 82% at 80% -10%,#7fdbad21,transparent 67%),radial-gradient(ellipse 70% 110% at -20% 110%,#c7b5ff0f,transparent 70%);z-index:-1}
+.compass-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:27px}
+.compass-heading h2{font-size:clamp(29px,4vw,43px);margin:9px 0 9px}
+.compass-heading p{color:#b8cbcc;font-size:13px;max-width:580px;margin:0}
+.compass-mini-icon{width:48px;height:48px;flex:none;display:grid;place-items:center;border-radius:15px;border:1px solid #9ee4bc65;color:var(--mint);font-size:25px;background:#9ee4bc12}
+.compass-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:0 0 19px}
+.compass-choice{display:flex;align-items:center;gap:14px;min-height:75px;padding:13px 17px;color:#d4e1e0;text-align:left;background:#101c26b3;border:1px solid #3f5661;border-radius:16px;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.compass-choice:hover{background:#1c3540;transform:translateY(-2px)}
+.compass-choice:focus-visible,.shot-switch button:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+.compass-choice[aria-pressed=true]{background:#b9f0d91b;border-color:#9ce2ba;box-shadow:inset 0 0 0 1px #9ee4ba54}
+.compass-choice .choice-ico{width:41px;height:41px;border-radius:12px;background:#bbd7db1a;display:grid;place-items:center;font-size:23px;flex:none}
+.compass-choice[aria-pressed=true] .choice-ico{background:#bcf0d32a}
+.compass-choice strong{display:block;font-size:13px;color:#f0f7f6;line-height:1.5}
+.compass-choice small{display:block;color:#adbec5;font-size:11px;line-height:1.55}
+.compass-panels{border-radius:21px;border:1px solid #547169;background:#0d1a24b7;min-height:400px}
+.compass-panel{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:16px;align-items:stretch;padding:27px}
+.compass-panel[hidden]{display:none}
+.compass-copy{display:flex;flex-direction:column;gap:5px;padding:13px 13px 15px 10px}
+.compass-overline{font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;color:var(--mint)}
+.compass-copy h3{margin:9px 0 12px;font-size:clamp(28px,3.4vw,40px);letter-spacing:-.05em}
+.compass-copy p{color:#c4d1d3;font-size:13px;line-height:1.85;margin:0 0 19px}
+.compass-progress{display:grid;gap:11px;margin:2px 0 24px}
+.compass-progress-item{display:grid;grid-template-columns:65px 1fr;align-items:start;gap:14px;font-size:12px;color:#c7d6d7}
+.compass-progress-item b{font-size:10px;color:#add2c3;letter-spacing:.065em;text-transform:uppercase}
+.compass-progress-item span{line-height:1.65}
+.compass-panel .button{margin-top:auto;width:fit-content}
+.compass-feature{position:relative;overflow:hidden;border-radius:19px;background:linear-gradient(135deg,#183934,#183048);min-height:325px;border:1px solid #385965;display:flex;align-items:center;justify-content:center}
+.compass-art{width:100%;height:100%;min-height:325px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.compass-art:before{content:'';position:absolute;width:300px;height:300px;border:1px solid #dcf4d133;border-radius:50%;box-shadow:0 0 0 53px #bcffed06,0 0 0 115px #c9ffff06}
+.compass-kuran .art-letter{position:relative;display:grid;place-items:center;width:102px;height:124px;border-radius:27px;background:#e8ffe8;color:#2b614a;box-shadow:0 25px 40px #071a1655;font-family:serif;font-size:77px}
+.compass-kuran .art-letter:nth-child(2){transform:translateY(-30px) rotate(9deg);background:#e0f6fb;color:#296477;z-index:2}
+.compass-kuran .art-letter:nth-child(3){transform:translateY(13px) rotate(-12deg);background:#f7eaff;color:#674e80}
+.compass-art-label{position:absolute;bottom:21px;left:22px;right:22px;display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:3;font-size:11px;font-weight:700;letter-spacing:.04em}
+.compass-art-label span{padding:8px 12px;border-radius:999px;background:#0d2239d9;border:1px solid #6d8a8e82}
+.compass-family{background:linear-gradient(145deg,#56304f,#362e50)}
+.compass-family .family-demo{position:relative;z-index:2;width:250px;max-width:80%;padding:27px;border-radius:28px;background:#fcf5fa;box-shadow:0 38px 80px #0d092a77;color:#584158;transform:rotate(-6deg)}
+.family-demo .f-icon{display:grid;place-items:center;width:56px;height:56px;border-radius:17px;background:#eed5e6;font-size:28px;margin-bottom:18px}
+.family-demo strong{font-size:18px;display:block;letter-spacing:-.03em;line-height:1.4}
+.family-demo small{display:block;font-size:10px;color:#977a8b}
+.family-track{height:9px;border-radius:15px;overflow:hidden;background:#e0cad7;margin:15px 0 8px}.family-track i{display:block;width:65%;height:100%;background:#b65c91;border-radius:15px}
+.compass-dispatch{background:linear-gradient(135deg,#182838,#0f2130)}
+.demo-browser{width:100%;align-self:stretch;display:flex;flex-direction:column;padding:13px;gap:8px;min-width:0}
+.demo-topbar{display:flex;align-items:center;justify-content:space-between;gap:9px;color:#c7d8db;font-size:10px}
+.demo-topbar .dots{display:flex;gap:5px}.demo-topbar .dots i{width:7px;height:7px;background:#6c8796;border-radius:50%}.demo-topbar .dots i:nth-child(1){background:#e4a5a5}.demo-topbar .dots i:nth-child(2){background:#eed3a6}.demo-topbar .dots i:nth-child(3){background:#a5dcbc}
+.demo-browser figure{margin:0;flex:1;min-height:215px;border-radius:10px;overflow:hidden;background:#e9f0f4;box-shadow:0 12px 30px #0006}
+.demo-browser img{display:block;width:100%;height:100%;max-height:315px;object-fit:cover;object-position:top left}
+.demo-browser figcaption{position:absolute;left:-9999px}
+.shot-switch{display:flex;justify-content:center;flex-wrap:wrap;gap:7px}
+.shot-switch button{font-size:11px;color:#d4e6e3;background:#304452;border:1px solid #526878;border-radius:999px;padding:7px 11px;min-height:34px;cursor:pointer}
+.shot-switch button[aria-pressed=true]{background:#d1fbe5;color:#16332d;border-color:#d1fbe5}
+.shot-switch button:hover{border-color:#b1e4cd}
+.compass-foot{display:flex;align-items:center;justify-content:space-between;gap:18px;color:#9eb4b7;font-size:11px;padding:18px 5px 0}
+.compass-foot strong{color:#def8e7;font-weight:600}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.vehicle-thumb{position:relative;width:min(90%,450px);height:190px;transform:rotate(-4deg);border-radius:13px;overflow:hidden;box-shadow:0 32px 55px #0008;border:5px solid #aec2d5;background:#e9f1f6}
+.vehicle-thumb img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.vehicle-thumb-label{position:absolute;bottom:9px;left:10px;border:1px solid #fff8;border-radius:30px;padding:5px 10px;background:#091d2cdb;color:#e9ffff;font-size:10px;font-weight:700}
+.section-rule{margin:0 auto 10px;width:min(var(--max),calc(100% - 48px));border:0;border-top:1px solid var(--line)}
+@media(max-width:950px){.compass-panel{grid-template-columns:1fr}.compass-copy{padding:5px}.compass-feature{min-height:310px}.compass-panels{min-height:0}.demo-browser img{max-height:360px}}
+@media(max-width:700px){.compass-shell{padding:20px;border-radius:22px}.compass-heading{align-items:center}.compass-heading h2{font-size:30px}.compass-heading p{font-size:12px}.compass-mini-icon{display:none}.compass-controls{grid-template-columns:1fr;gap:8px}.compass-choice{min-height:58px;padding:9px 12px}.compass-choice .choice-ico{height:35px;width:35px;font-size:19px}.compass-choice small{font-size:10px}.compass-panel{padding:16px}.compass-copy h3{font-size:27px}.compass-copy p{font-size:12px}.compass-feature,.compass-art{min-height:265px}.demo-browser figure{min-height:190px}.compass-foot{align-items:flex-start;flex-direction:column}.compass-panel .button{width:100%}}
+@media(max-width:420px){.compass-section{padding:40px 0 62px}.compass-kuran .art-letter{width:82px;height:96px;font-size:60px}.compass-progress-item{grid-template-columns:48px 1fr;gap:9px}.compass-progress-item span{font-size:11px}.compass-family .family-demo{padding:19px}}
+@media(prefers-reduced-motion:reduce){.compass-choice{transition:none}.compass-choice:hover{transform:none}}
+
+/* Real demo preview on project detail page */
+.portfolio-shot{margin:27px 0 22px;overflow:hidden;border:1px solid #526b73;border-radius:15px;background:#152935;box-shadow:0 20px 40px #0004}
+.portfolio-shot img{display:block;width:100%;height:auto;border-bottom:1px solid #526b73}
+.portfolio-shot figcaption{font-size:11px;line-height:1.7;color:#d0e3dc;padding:10px 14px}
